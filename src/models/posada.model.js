@@ -9,6 +9,7 @@ const Posada = function(pos) {
     this.numberPhone = pos.numberPhone;
     this.numberPhoneFijo = pos.numberPhoneFijo;
     this.mark = pos.mark;
+    this.position = pos.position;
     this.area = pos.area;
     this.location = pos.location;
     this.years = pos.years;

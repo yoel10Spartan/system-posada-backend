@@ -7,3 +7,5 @@ const dbConfig = {
 };
 
 export default dbConfig;
+
+// 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
