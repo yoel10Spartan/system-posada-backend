@@ -3,8 +3,8 @@ import template from './template.js';
 
 export const sendMail = (data) => {
     const client = new SMTPClient({
-        user: 'posadagda2022@gmail.com',
-        password: 'eqivnksswrrzjcbk',
+        user: 'posadagda20221@gmail.com',
+        password: 'uugxujdhinqvxcku',
         host: 'smtp.gmail.com',
         ssl: true,
         port: 465,
@@ -15,7 +15,7 @@ export const sendMail = (data) => {
     // comunicacion.corporativa@gda.mx
 
     const message = {
-        from: 'posadagda2022@gmail.com',
+        from: 'posadagda20221@gmail.com',
         to: `${data.email.toLowerCase()}`,
         // cc: 'munozzecuayoel@gmail.com, hola@registroparacongresos.com',
         subject: 'Mensaje de confirmación de registro a POSADA EMPRESAS ARIES 2022.',
