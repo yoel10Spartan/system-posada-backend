@@ -8,8 +8,6 @@ export const sendMail = (data) => {
         host: 'smtp.gmail.com',
         ssl: true,
         port: 465,
-        tls: false,
-        timeout: 3000
     });
 
     // comunicacion.corporativa@gda.mx
