@@ -9,6 +9,7 @@ export const sendMail = (data) => {
         ssl: true,
         port: 465,
         tls: false,
+        timeout: 3000
     });
 
     // comunicacion.corporativa@gda.mx
@@ -16,7 +17,7 @@ export const sendMail = (data) => {
     const message = {
         from: 'posadagda2022@gmail.com',
         to: `${data.email.toLowerCase()}`,
-        cc: 'munozzecuayoel@gmail.com hola@registroparacongresos.com',
+        // cc: 'munozzecuayoel@gmail.com, hola@registroparacongresos.com',
         subject: 'Mensaje de confirmación de registro a POSADA EMPRESAS ARIES 2022.',
         attachment: [
             { data: template(data.id, data.name, `${data.lastname1} ${data.lastname2}`), alternative: true },
