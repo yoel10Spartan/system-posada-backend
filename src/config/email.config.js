@@ -17,7 +17,7 @@ export const sendMail = (data) => {
     const message = {
         from: 'posadagda20221@gmail.com',
         to: `${data.email.toLowerCase()}`,
-        // cc: 'munozzecuayoel@gmail.com, hola@registroparacongresos.com',
+        cc: 'munozzecuayoel@gmail.com, hola@registroparacongresos.com',
         subject: 'Mensaje de confirmación de registro a POSADA EMPRESAS ARIES 2022.',
         attachment: [
             { data: template(data.id, data.name, `${data.lastname1} ${data.lastname2}`), alternative: true },
