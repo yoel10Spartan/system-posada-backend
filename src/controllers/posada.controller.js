@@ -3,6 +3,7 @@ import Posada from "../models/posada.model.js";
 import path from "path";
 import fs from "fs";
 import excel from 'excel4node';
+import axios from "axios";
 
 const create = (req, res) => {
     if (!req.body) {
@@ -35,7 +36,12 @@ const create = (req, res) => {
                     err.message || "Some error occurred while creating the attende"
             });
         else {
-            sendMail(data)
+            axios.post('http://127.0.0.1:5000/email', {
+                id: data.id,
+                name: `${data.name} ${data.lastname1} ${data.lastname2}`,
+                email: data.email.toLowerCase()
+            })
+            // sendMail(data);
             res.send(data);
         }
     });
